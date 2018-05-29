@@ -48,7 +48,7 @@ Shader "Custom/BrightTexture" {
 
         ENDCG
     }
-   }
+    }
 
 
 
