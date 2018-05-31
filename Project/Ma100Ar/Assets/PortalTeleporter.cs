@@ -29,13 +29,13 @@ public class PortalTeleporter : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		if (other.tag == "Player"){
+		if (other.tag == "MainCamera"){
 			playerOverlap = true;
 		}
 	}
 
 	void OnTriggerExit(Collider other){
-		if (other.tag == "Player"){
+		if (other.tag == "MainCamera"){
 			playerOverlap = false;
 		}
 	}
