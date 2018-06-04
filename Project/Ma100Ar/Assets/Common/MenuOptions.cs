@@ -1,5 +1,5 @@
 /*===============================================================================
-Copyright (c) 2015-2017 PTC Inc. All Rights Reserved.
+Copyright (c) 2015-2018 PTC Inc. All Rights Reserved.
  
 Copyright (c) 2015 Qualcomm Connected Experiences, Inc. All Rights Reserved.
  
@@ -8,24 +8,31 @@ countries.
 ===============================================================================*/
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using Vuforia;
 
 public class MenuOptions : MonoBehaviour
 {
     #region PRIVATE_MEMBERS
-    private CameraSettings mCamSettings = null;
-    private TrackableSettings mTrackableSettings = null;
-    private MenuAnimator mMenuAnim = null;
+    CameraSettings m_CameraSettings;
+    TrackableSettings m_TrackableSettings;
+    Toggle m_ExtTrackingToggle, m_AutofocusToggle, m_FlashToggle, m_FrontCamToggle;
+    Canvas m_OptionsMenuCanvas;
+    OptionsConfig m_OptionsConfig;
     #endregion //PRIVATE_MEMBERS
 
+    public bool IsDisplayed { get; private set; }
 
     #region MONOBEHAVIOUR_METHODS
     protected virtual void Start()
     {
-        mCamSettings = FindObjectOfType<CameraSettings>();
-        mTrackableSettings = FindObjectOfType<TrackableSettings>();
-        mMenuAnim = FindObjectOfType<MenuAnimator>();
+        m_CameraSettings = FindObjectOfType<CameraSettings>();
+        m_TrackableSettings = FindObjectOfType<TrackableSettings>();
+        m_OptionsConfig = FindObjectOfType<OptionsConfig>();
+        m_OptionsMenuCanvas = GetComponentInChildren<Canvas>(true);
+        m_ExtTrackingToggle = FindUISelectableWithText<Toggle>("Extended");
+        m_AutofocusToggle = FindUISelectableWithText<Toggle>("Autofocus");
+        m_FlashToggle = FindUISelectableWithText<Toggle>("Flash");
+        m_FrontCamToggle = FindUISelectableWithText<Toggle>("FrontCamera");
 
         var vuforia = VuforiaARController.Instance;
         vuforia.RegisterOnPauseCallback(OnPaused);
@@ -34,74 +41,63 @@ public class MenuOptions : MonoBehaviour
 
 
     #region PUBLIC_METHODS
-    public void ShowAboutPage()
+
+    public void ToggleAutofocus(bool enabled)
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("1-About");
+        if (m_CameraSettings)
+            m_CameraSettings.SwitchAutofocus(enabled);
     }
 
-    public void ToggleAutofocus()
+    public void ToggleTorch(bool enabled)
     {
-        Toggle autofocusToggle = FindUISelectableWithText<Toggle>("Autofocus");
-        if (autofocusToggle && mCamSettings)
-            mCamSettings.SwitchAutofocus(autofocusToggle.isOn);
-    }
-
-    public void ToggleTorch()
-    {
-        Toggle flashToggle = FindUISelectableWithText<Toggle>("Flash");
-        if (flashToggle && mCamSettings)
+        if (m_FlashToggle && m_CameraSettings)
         {
-            mCamSettings.SwitchFlashTorch(flashToggle.isOn);
+            m_CameraSettings.SwitchFlashTorch(enabled);
 
             // Update UI toggle status (ON/OFF) in case the flash switch failed
-            flashToggle.isOn = mCamSettings.IsFlashTorchEnabled();
+            m_FlashToggle.isOn = m_CameraSettings.IsFlashTorchEnabled();
         }
     }
 
-    public void ToggleFrontCamera()
+    public void ToggleFrontCamera(bool enabled)
     {
-        if (mCamSettings)
+        if (m_CameraSettings)
         {
-            mCamSettings.SelectCamera(mCamSettings.IsFrontCameraActive() ? CameraDevice.CameraDirection.CAMERA_BACK : CameraDevice.CameraDirection.CAMERA_FRONT);
+            m_CameraSettings.SelectCamera(m_CameraSettings.IsFrontCameraActive() ?
+                                          CameraDevice.CameraDirection.CAMERA_BACK :
+                                          CameraDevice.CameraDirection.CAMERA_FRONT);
 
             // Toggle flash if it is on while switching to front camera
-            Toggle flashToggle = FindUISelectableWithText<Toggle>("Flash");
-            if (mCamSettings.IsFrontCameraActive() && flashToggle && flashToggle.isOn)
-                ToggleTorch();
+            if (m_CameraSettings.IsFrontCameraActive() && m_FlashToggle && m_FlashToggle.isOn)
+                ToggleTorch(false);
         }
     }
 
-    public void ToggleExtendedTracking()
+    public void ToggleExtendedTracking(bool enabled)
     {
-        Toggle extTrackingToggle = FindUISelectableWithText<Toggle>("Extended");
-        if (extTrackingToggle && mTrackableSettings)
-            mTrackableSettings.SwitchExtendedTracking(extTrackingToggle.isOn);
+        if (m_TrackableSettings)
+            m_TrackableSettings.SwitchExtendedTracking(enabled);
     }
 
     public void ActivateDataset(string datasetName)
     {
-        if (mTrackableSettings)
-            mTrackableSettings.ActivateDataSet(datasetName);
+        if (m_TrackableSettings)
+            m_TrackableSettings.ActivateDataSet(datasetName);
     }
 
     public void UpdateUI()
     {
-        Toggle extTrackingToggle = FindUISelectableWithText<Toggle>("Extended");
-        if (extTrackingToggle && mTrackableSettings)
-            extTrackingToggle.isOn = mTrackableSettings.IsExtendedTrackingEnabled();
+        if (m_ExtTrackingToggle && m_TrackableSettings)
+            m_ExtTrackingToggle.isOn = m_TrackableSettings.IsExtendedTrackingEnabled();
 
-        Toggle flashToggle = FindUISelectableWithText<Toggle>("Flash");
-        if (flashToggle && mCamSettings)
-            flashToggle.isOn = mCamSettings.IsFlashTorchEnabled();
+        if (m_FlashToggle && m_CameraSettings)
+            m_FlashToggle.isOn = m_CameraSettings.IsFlashTorchEnabled();
 
-        Toggle autofocusToggle = FindUISelectableWithText<Toggle>("Autofocus");
-        if (autofocusToggle && mCamSettings)
-            autofocusToggle.isOn = mCamSettings.IsAutofocusEnabled();
+        if (m_AutofocusToggle && m_CameraSettings)
+            m_AutofocusToggle.isOn = m_CameraSettings.IsAutofocusEnabled();
 
-        Toggle frontCamToggle = FindUISelectableWithText<Toggle>("FrontCamera");
-        if (frontCamToggle && mCamSettings)
-            frontCamToggle.isOn = mCamSettings.IsFrontCameraActive();
-
+        if (m_FrontCamToggle && m_CameraSettings)
+            m_FrontCamToggle.isOn = m_CameraSettings.IsFrontCameraActive();
     }
 
     public void RestartObjectTracker()
@@ -111,7 +107,7 @@ public class MenuOptions : MonoBehaviour
         {
             objTracker.Stop();
 
-            foreach(DataSet dataset in objTracker.GetDataSets())
+            foreach (DataSet dataset in objTracker.GetDataSets())
             {
                 objTracker.DeactivateDataSet(dataset);
                 objTracker.ActivateDataSet(dataset);
@@ -121,11 +117,26 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void CloseMenu()
+    public void ShowOptionsMenu(bool show)
     {
-        if (mMenuAnim)
-            mMenuAnim.Hide();
+        if (m_OptionsConfig && m_OptionsConfig.AnyOptionsEnabled())
+        {
+            if (show)
+            {
+                UpdateUI();
+                m_OptionsMenuCanvas.gameObject.SetActive(true);
+                m_OptionsMenuCanvas.enabled = true;
+                IsDisplayed = true;
+            }
+            else
+            {
+                m_OptionsMenuCanvas.gameObject.SetActive(false);
+                m_OptionsMenuCanvas.enabled = false;
+                IsDisplayed = false;
+            }
+        }
     }
+
     #endregion //PUBLIC_METHODS
 
 
@@ -146,15 +157,17 @@ public class MenuOptions : MonoBehaviour
     #region PRIVATE_METHODS
     private void OnPaused(bool paused)
     {
-        bool appResumed = !paused;
-        if (appResumed)
+        if (paused)
         {
+            // Handle any tasks when app is paused here:
+        }
+        else
+        {
+            // Handle any tasks when app is resume here:
+
             // The flash torch is switched off by the OS automatically when app is paused.
             // On resume, update torch UI toggle to match torch status.
-            Toggle flashToggle = FindUISelectableWithText<Toggle>("Flash");
-
-            if (flashToggle != null)
-                flashToggle.isOn = mCamSettings.IsFlashTorchEnabled();
+            UpdateUI();
         }
     }
     #endregion //PRIVATE_METHODS

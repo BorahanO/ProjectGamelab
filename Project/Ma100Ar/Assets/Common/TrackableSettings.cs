@@ -15,7 +15,7 @@ using Vuforia;
 public class TrackableSettings : MonoBehaviour
 {
     #region PROTECTED_MEMBERS
-	protected bool mExtTrackingEnabled = false;
+    protected bool mExtTrackingEnabled = false;
     #endregion //PROTECTED_MEMBERS
 
 

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="Swamp" size="50.000000 71.250000" />
     <ImageTarget name="island" size="50.000000 71.604935" />
     <ImageTarget name="plains" size="50.000000 71.250000" />
   </Tracking>

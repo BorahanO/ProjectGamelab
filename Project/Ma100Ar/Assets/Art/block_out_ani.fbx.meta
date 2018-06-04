@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: 9fd983bbb90f7e14d8892097288c4c0b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MonsterAnimationFinal3_Yaro_V2_:beest_3
+    100004: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Beast
+    100006: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:C_MONSTER
+    100008: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:FRONT
+    100010: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:joint17
+    100012: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:joint18
+    100014: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:joint19
+    100016: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:joint20
+    100018: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:L_Foot
+    100020: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:L_Knee
+    100022: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:L_Shoulder
+    100024: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:L_ShoulderBlade
+    100026: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Monster2
+    100028: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Monster_3_MayaRef_beest_final____1
+    100030: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Skelet
+    100032: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:TAIL
+    100034: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:TAIL_2
+    100036: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:TAIL_3
+    100038: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:TAIL_4
+    100040: wesp_beast
+    100042: Wesp_Rig_02:Body
+    100044: Wesp_Rig_02:body
+    100046: Wesp_Rig_02:Body_IK_CNTL
+    100048: Wesp_Rig_02:Clavicul1
+    100050: Wesp_Rig_02:Clavicul2
+    100052: Wesp_Rig_02:Head
+    100054: Wesp_Rig_02:Heup
+    100056: Wesp_Rig_02:joint1
+    100058: Wesp_Rig_02:joint2
+    100060: Wesp_Rig_02:joint2 1
+    100062: Wesp_Rig_02:joint3
+    100064: Wesp_Rig_02:joint3 1
+    100066: Wesp_Rig_02:joint7
+    100068: Wesp_Rig_02:Kont
+    100070: Wesp_Rig_02:L_Wingbase
+    100072: Wesp_Rig_02:L_WingEnd
+    100074: Wesp_Rig_02:L_WingStart
+    100076: Wesp_Rig_02:Neck
+    100078: Wesp_Rig_02:Pelvis
+    100080: Wesp_Rig_02:Pelvis_2
+    100082: Wesp_Rig_02:Pelvis_3
+    100084: Wesp_Rig_02:Pelvis_4
+    100086: Wesp_Rig_02:Pelvis_5
+    100088: Wesp_Rig_02:R_Elbow
+    100090: Wesp_Rig_02:R_Elbow 1
+    100092: Wesp_Rig_02:R_Finger_1
+    100094: Wesp_Rig_02:R_Finger_1 1
+    100096: Wesp_Rig_02:R_Finger_2
+    100098: Wesp_Rig_02:R_Finger_2 1
+    100100: Wesp_Rig_02:R_Shoulder
+    100102: Wesp_Rig_02:R_Shoulder 1
+    100104: Wesp_Rig_02:R_Wingbase
+    100106: Wesp_Rig_02:R_WingEnd
+    100108: Wesp_Rig_02:R_WingStart
+    100110: Wesp_Rig_02:R_Wrist_1
+    100112: Wesp_Rig_02:R_Wrist_1 1
+    100114: Wesp_Rig_02:R_Wrist_2
+    100116: Wesp_Rig_02:R_Wrist_2 1
+    100118: Wesp_Rig_02:wesp_final__
+    400000: //RootNode
+    400002: MonsterAnimationFinal3_Yaro_V2_:beest_3
+    400004: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Beast
+    400006: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:C_MONSTER
+    400008: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:FRONT
+    400010: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:joint17
+    400012: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:joint18
+    400014: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:joint19
+    400016: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:joint20
+    400018: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:L_Foot
+    400020: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:L_Knee
+    400022: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:L_Shoulder
+    400024: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:L_ShoulderBlade
+    400026: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Monster2
+    400028: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Monster_3_MayaRef_beest_final____1
+    400030: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Skelet
+    400032: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:TAIL
+    400034: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:TAIL_2
+    400036: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:TAIL_3
+    400038: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:TAIL_4
+    400040: wesp_beast
+    400042: Wesp_Rig_02:Body
+    400044: Wesp_Rig_02:body
+    400046: Wesp_Rig_02:Body_IK_CNTL
+    400048: Wesp_Rig_02:Clavicul1
+    400050: Wesp_Rig_02:Clavicul2
+    400052: Wesp_Rig_02:Head
+    400054: Wesp_Rig_02:Heup
+    400056: Wesp_Rig_02:joint1
+    400058: Wesp_Rig_02:joint2
+    400060: Wesp_Rig_02:joint2 1
+    400062: Wesp_Rig_02:joint3
+    400064: Wesp_Rig_02:joint3 1
+    400066: Wesp_Rig_02:joint7
+    400068: Wesp_Rig_02:Kont
+    400070: Wesp_Rig_02:L_Wingbase
+    400072: Wesp_Rig_02:L_WingEnd
+    400074: Wesp_Rig_02:L_WingStart
+    400076: Wesp_Rig_02:Neck
+    400078: Wesp_Rig_02:Pelvis
+    400080: Wesp_Rig_02:Pelvis_2
+    400082: Wesp_Rig_02:Pelvis_3
+    400084: Wesp_Rig_02:Pelvis_4
+    400086: Wesp_Rig_02:Pelvis_5
+    400088: Wesp_Rig_02:R_Elbow
+    400090: Wesp_Rig_02:R_Elbow 1
+    400092: Wesp_Rig_02:R_Finger_1
+    400094: Wesp_Rig_02:R_Finger_1 1
+    400096: Wesp_Rig_02:R_Finger_2
+    400098: Wesp_Rig_02:R_Finger_2 1
+    400100: Wesp_Rig_02:R_Shoulder
+    400102: Wesp_Rig_02:R_Shoulder 1
+    400104: Wesp_Rig_02:R_Wingbase
+    400106: Wesp_Rig_02:R_WingEnd
+    400108: Wesp_Rig_02:R_WingStart
+    400110: Wesp_Rig_02:R_Wrist_1
+    400112: Wesp_Rig_02:R_Wrist_1 1
+    400114: Wesp_Rig_02:R_Wrist_2
+    400116: Wesp_Rig_02:R_Wrist_2 1
+    400118: Wesp_Rig_02:wesp_final__
+    2100000: Wesp_Rig_02_wesp
+    2100002: MonsterAnimationFinal3_Yaro_V2__MonsterAnimationFinal3_Yaro2_based3
+    4300000: Wesp_Rig_02:wesp_final__
+    4300002: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Monster_3_MayaRef_beest_final____1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: MonsterAnimationFinal3_Yaro_V2_:MonsterAnimationFinal3_Yaro2:Monster_3_MayaRef_beest_final____1
+    13700002: Wesp_Rig_02:wesp_final__
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 600
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
