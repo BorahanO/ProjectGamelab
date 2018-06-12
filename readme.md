@@ -12,7 +12,7 @@ Augmented Reality project for MA100 MediaBites
 ## Portfolio
 Zet hier de links neer naar jullie documentatie.
 
-* [Onderzoek](https://drive.google.com/open?id=1rm2I5VwGzB-_GMQQVr46poQ_VxG0gBv5)
-* [Ontwerp]()
+* [Onderzoek]()
+* [Ontwerp](https://drive.google.com/open?id=1rm2I5VwGzB-_GMQQVr46poQ_VxG0gBv5)
 * [Testrapportage]()
 * [Presentatie]()
