@@ -4,9 +4,11 @@ Team #1
 2. Jerry Sam
 
 [Projectmanagment](https://trello.com/b/DW4DDuc9/ar-media-bites)
+[File Sharing](https://drive.google.com/drive/folders/1Dy8vX4vTRcDKdLTAcc9RsR6EnEqCafon)
 
 ## Ontwerp
-Augmented Reality project for MA100 MediaBites
+Augmented Reality project for MA100 MediaBites in opdracht van Artishock.
+Een app dat via de camera van een smartphone een virtuele laag toevoegt op de echte wereld.
 
 ## Portfolio
 
