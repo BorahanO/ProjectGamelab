@@ -3,8 +3,8 @@ Team #1
 1. Bora Oksal
 2. Jerry Sam
 
-[Projectmanagment](https://trello.com/b/DW4DDuc9/ar-media-bites)
-[File Sharing](https://drive.google.com/drive/folders/1Dy8vX4vTRcDKdLTAcc9RsR6EnEqCafon)
+* [Projectmanagment](https://trello.com/b/DW4DDuc9/ar-media-bites)
+* [File Sharing](https://drive.google.com/drive/folders/1Dy8vX4vTRcDKdLTAcc9RsR6EnEqCafon)
 
 ## Ontwerp
 Augmented Reality project for MA100 MediaBites in opdracht van Artishock.
@@ -12,7 +12,7 @@ Een app dat via de camera van een smartphone een virtuele laag toevoegt op de ec
 
 ## Portfolio
 
-* [Onderzoek](https://drive.google.com/file/d/1nd8IRuLyn7BDkZz4nxXJ4gjQ__xqyrgB/view?usp=sharing)
+[Onderzoek](https://drive.google.com/file/d/1nd8IRuLyn7BDkZz4nxXJ4gjQ__xqyrgB/view?usp=sharing)
 * [Ontwerp](https://drive.google.com/open?id=1rm2I5VwGzB-_GMQQVr46poQ_VxG0gBv5)
 * [Testrapportage]()
 * [Presentatie]()
