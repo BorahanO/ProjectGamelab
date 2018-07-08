@@ -1,5 +1,5 @@
 ﻿/*===============================================================================
-Copyright (c) 2015-2017 PTC Inc. All Rights Reserved.
+Copyright (c) 2015-2018 PTC Inc. All Rights Reserved.
  
 Copyright (c) 2015 Qualcomm Connected Experiences, Inc. All Rights Reserved.
  
@@ -40,11 +40,10 @@ public class LoadingScreen : MonoBehaviour
     #endregion // MONOBEHAVIOUR_METHODS
 
 
-    #region PRIVATE_METHODS
-    private void LoadNextSceneAsync()
+    #region PROTECTED_METHODS
+    protected virtual void LoadNextSceneAsync()
     {
         UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    #endregion // PRIVATE_METHODS
+    #endregion // PROTECTED_METHODS
 }

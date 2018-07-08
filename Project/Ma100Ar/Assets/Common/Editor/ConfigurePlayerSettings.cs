@@ -39,12 +39,6 @@ namespace Vuforia.EditorClasses
             androidSymbols = androidSymbols ?? string.Empty;
             if (!androidSymbols.Contains(VUFORIA_ANDROID_SETTINGS))
             {
-                if (PlayerSettings.Android.targetArchitectures != AndroidArchitecture.ARMv7)
-                {
-                    Debug.Log("Setting Android target device to ARMv7");
-                    PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARMv7;
-                }
-
                 if (PlayerSettings.Android.androidTVCompatibility)
                 {
                     // Disable Android TV compatibility, as this is not compatible with
@@ -146,10 +140,10 @@ namespace Vuforia.EditorClasses
 
         static void EnableVR(BuildTargetGroup buildTargetGroup)
         {
-            if (!UnityEditorInternal.VR.VREditor.GetVREnabledOnTargetGroup(buildTargetGroup))
+            if (!UnityEditor.PlayerSettings.GetVirtualRealitySupported(buildTargetGroup))
             {
                 Debug.Log("Enabling Virtual Reality for " + buildTargetGroup.ToString());
-                UnityEditorInternal.VR.VREditor.SetVREnabledOnTargetGroup(buildTargetGroup, true);
+                UnityEditor.PlayerSettings.SetVirtualRealitySupported(buildTargetGroup, true);
 
                 // Set the VR SDK to either Vuforia or Windows Mixed Reality based on VuforiaConfiguration settings
                 // Vuforia: Suports ARVR Stereo Viewer mode for Android/iOS or StereoRendering for ODG
@@ -157,7 +151,7 @@ namespace Vuforia.EditorClasses
 
                 string vrSDK = (buildTargetGroup == BuildTargetGroup.WSA) ? "WindowsMR" : "Vuforia";
                 Debug.Log("Setting Virtual Reality SDK to " + vrSDK + " for " + buildTargetGroup.ToString());
-                UnityEditorInternal.VR.VREditor.SetVREnabledDevicesOnTargetGroup(buildTargetGroup, new[] { vrSDK });
+                UnityEditor.PlayerSettings.SetVirtualRealitySDKs(buildTargetGroup, new[] { vrSDK });
             }
         }
 
