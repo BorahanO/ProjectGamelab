@@ -34,7 +34,7 @@ Android OS Nexus Tablet & Andoid OS Smartphone. (Samsung S4+)
 ## Portfolio
 
 * [Ontwerpdocument](https://drive.google.com/open?id=1rm2I5VwGzB-_GMQQVr46poQ_VxG0gBv5)
-* [Presentatie](https://docs.google.com/presentation/d/1HzBpydJQexOhQ1rbivG-Cqbj1WVfi7Q4apvJEF7Fw4w/edit?usp=sharing)
+* [Presentatie](https://docs.google.com/presentation/d/1EwGBCq-mjxtu5FnkfNbA_9p87GnZ96dXLHUsX3Gfvy0/edit?usp=sharing)
 * [Projectmanagment](https://trello.com/b/DW4DDuc9/ar-media-bites)
 * [File Sharing](https://drive.google.com/drive/folders/1Dy8vX4vTRcDKdLTAcc9RsR6EnEqCafon)
 * [Beschrijving](https://docs.google.com/document/d/15IFWD5mBCeck3PPxPJ0KpDPsSUCXvRo-VuWO1n2OcZY/edit?usp=sharing)
